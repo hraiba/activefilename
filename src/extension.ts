@@ -100,7 +100,10 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(
 	showFileOptions,
 	showFileName,
-	openFolder,);
+	openFolder,
+  copyPath,
+);
+
 }
 
 // This method is called when your extension is deactivated
