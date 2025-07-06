@@ -59,7 +59,7 @@ None at this time. If you encounter any issues, please report them on the projec
 
 ## Release Notes
 
-### 0.0.1
+### 0.0.2
 
 Initial release of ActiveFileName extension
 - Added active file name display in status bar
