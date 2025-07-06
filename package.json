@@ -30,8 +30,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "activefilename.helloWorld",
-        "title": "Hello World"
+        "command": "activefilename.showFileOptions",
+        "title": "Show Active file commands"
       }
     ]
   },
