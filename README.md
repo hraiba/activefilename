@@ -10,7 +10,11 @@ A VS Code extension that displays the name of the currently active file in the s
 - **Multiple File Actions**: Access common file operations without leaving your current view
 - **Clean Interface**: Simple, unobtrusive display that integrates seamlessly with VS Code's status bar
 
+![ActiveFileName in action](images/demo.gif)
+
 The extension adds a clickable status bar item on the left side that shows just the filename (without the full path) of the currently active editor. When no file is open, the status bar item will be hidden.
+
+![Status Bar Display](images/statusbar.png)
 
 ## Available Actions
 
@@ -19,6 +23,8 @@ Click on the active filename in the status bar to access these options:
 - **Show File Name**: Display the current filename in an information message
 - **Open Containing Folder**: Reveal the file's folder in your operating system's file explorer
 - **Copy File Path**: Copy the full file path to your clipboard
+
+![Quick Pick Menu](images/command.png)
 
 ## Requirements
 
@@ -46,20 +52,24 @@ The extension registers the following commands:
 - `activefilename.openFolder`: Opens the containing folder in the OS file explorer
 - `activefilename.copyPath`: Copies the full file path to clipboard
 
+![Extension Overview](images/options.png)
 ## Known Issues
 
 None at this time. If you encounter any issues, please report them on the project repository.
 
 ## Release Notes
 
-### pre-release 0.0.1
+### 0.0.1
 
 Initial release of ActiveFileName extension
 - Added active file name display in status bar
 - Real-time updates when switching between files
 - Tooltip support for better user experience
 - Interactive status bar with quick access to file operations
-- Show file name, open containing folder, and copy file path actions
+- Comamnds
+    - Show file name.
+    - open containing folder. 
+    - copy file path actions
 
 ---
 
