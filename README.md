@@ -26,6 +26,7 @@ Click on the active filename in the status bar to access these options:
 
 ![Quick Pick Menu](images/command.png)
 
+![Extension Overview](images/options.png)
 ## Requirements
 
 - VS Code version 1.101.0 or higher
@@ -52,7 +53,6 @@ The extension registers the following commands:
 - `activefilename.openFolder`: Opens the containing folder in the OS file explorer
 - `activefilename.copyPath`: Copies the full file path to clipboard
 
-![Extension Overview](images/options.png)
 ## Known Issues
 
 None at this time. If you encounter any issues, please report them on the project repository.
