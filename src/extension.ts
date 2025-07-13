@@ -16,7 +16,7 @@ const pathSeparatorRegex = /[\/\\]/g;
   vscode.window.onDidChangeActiveTextEditor(
     (editor) => {
       if (editor) {
-        const newFileName = editor.document.fileName.split("/").pop() ?? "";
+        const newFileName = editor.document.fileName.split(pathSeparatorRegex).pop() ?? "";
         statusBarItem.text = newFileName;
         statusBarItem.show();
       } else {
@@ -32,7 +32,7 @@ const pathSeparatorRegex = /[\/\\]/g;
         vscode.window.activeTextEditor &&
         event.document === vscode.window.activeTextEditor.document
       ) {
-        const updatedFileName = event.document.fileName.split("/").pop() ?? "";
+        const updatedFileName = event.document.fileName.split(pathSeparatorRegex).pop() ?? "";
         statusBarItem.text = updatedFileName;
         statusBarItem.show();
       } else {
