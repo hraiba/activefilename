@@ -5,8 +5,9 @@ export function activate(context: vscode.ExtensionContext) {
     vscode.StatusBarAlignment.Left,
     10
   );
+const pathSeparatorRegex = /[\/\\]/g;
   const fileName =
-    vscode.window.activeTextEditor?.document.fileName.split("/").pop() ?? "";
+    vscode.window.activeTextEditor?.document.fileName.split(pathSeparatorRegex).pop() ?? "";
   statusBarItem.text = fileName;
   statusBarItem.tooltip = "Active File Name";
   statusBarItem.command = "activefilename.showFileOptions";
