@@ -2,7 +2,7 @@
   "name": "active-filename",
   "displayName": "ActiveFileName",
   "description": "show the active file name in statusbar ",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "engines": {
     "vscode": "^1.101.0"
   },
@@ -17,6 +17,11 @@
     "extension",
     "statusbar",
     "active file",
+    "active filename",
+    "file",
+    "file path",
+    "file uri",
+    "ActiveFileName",
     "file name",
     "active filename"
   ],

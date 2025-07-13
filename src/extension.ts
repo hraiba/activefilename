@@ -56,6 +56,10 @@ const pathSeparatorRegex = /[\/\\]/g;
           command: "activefilename.openFolder",
         },
         { label: "$(copy) Copy File Path", command: "activefilename.copyPath" },
+        {
+          label: "$(terminal) Open in Terminal",
+          command: "activefilename.openInTerminal"
+        }
       ];
       const selectedOption = await vscode.window.showQuickPick(options, {
         placeHolder: "Select an option for the active file",
@@ -98,11 +102,25 @@ const pathSeparatorRegex = /[\/\\]/g;
 		vscode.window.showErrorMessage("No active file found.");
 	  }
 	});
+
+  const openInTerminal = vscode.commands.registerCommand(
+  "activefilename.openInTerminal", () => {
+  const filePath = vscode.window.activeTextEditor?.document.fileName;
+  if (filePath) {
+    const terminal = vscode.window.activeTerminal || vscode.window.createTerminal("Active File Terminal");
+    const fileDirectory = filePath.substring(0, filePath.lastIndexOf("/"));
+    terminal.sendText(`cd "${fileDirectory}"`);
+    terminal.show();
+  } else {
+    vscode.window.showErrorMessage("No active file found.");
+  }
+});
   context.subscriptions.push(
 	showFileOptions,
 	showFileName,
 	openFolder,
   copyPath,
+  openInTerminal
 );
 
 }
